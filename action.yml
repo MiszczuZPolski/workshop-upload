@@ -12,7 +12,7 @@ runs:
     - ${{ inputs.appId }}
     - ${{ inputs.itemId }}
     - ${{ inputs.contentPath }}
-    - ${{ inputs.changelog }}
+    - ${{ inputs.changelog }}  # Will be passed as file or string
 
 inputs:
   appId:
@@ -20,7 +20,7 @@ inputs:
     required: false
     default: '107410'
   changelog:
-    description: 'Changelog'
+    description: 'Changelog (can be a file or string)'
     required: false
     default: ''
   itemId:
@@ -29,4 +29,3 @@ inputs:
   contentPath:
     description: 'Path of folder to upload'
     required: true
-
